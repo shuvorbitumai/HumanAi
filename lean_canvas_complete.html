@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Talent Platform - Lean Canvas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: landscape;
+            margin: 0.5cm;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Main Lean Canvas Grid */
+        .lean-canvas {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: minmax(500px, auto) minmax(350px, auto);
+            gap: 2px;
+            background: #2c3e50;
+            border: 3px solid #2c3e50;
+        }
+
+        .box {
+            background: white;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .box-header {
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-bottom: 4px;
+            margin-bottom: 6px;
+            border-bottom: 2px solid;
+        }
+
+        .action-label {
+            font-size: 10px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 6px;
+        }
+
+        .content {
+            font-size: 9px;
+            line-height: 1.4;
+            color: #2c3e50;
+            flex-grow: 1;
+        }
+
+        .content h5 {
+            font-size: 9.5px;
+            font-weight: bold;
+            margin: 6px 0 3px 0;
+            color: #34495e;
+        }
+
+        .content h5:first-child {
+            margin-top: 0;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 6px 0;
+        }
+
+        .content li {
+            padding-left: 10px;
+            position: relative;
+            margin-bottom: 1px;
+            font-size: 8.5px;
+            line-height: 1.3;
+        }
+
+        .content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+        }
+
+        /* Box-specific colors */
+        .problem .box-header { color: #7d5a3d; border-color: #d4a574; }
+        .solution .box-header { color: #1f618d; border-color: #7fb3d5; }
+        .uvp .box-header { color: #922b21; border-color: #ec7063; }
+        .unfair .box-header { color: #7d3c98; border-color: #bb8fce; }
+        .customer .box-header { color: #7d5a3d; border-color: #d4a574; }
+        .metrics .box-header { color: #6c3483; border-color: #bb8fce; }
+        .channels .box-header { color: #1f618d; border-color: #7fb3d5; }
+        .cost .box-header { color: #117a65; border-color: #76d7c4; }
+        .revenue .box-header { color: #117a65; border-color: #76d7c4; }
+
+        .highlight {
+            background: #f8f9fa;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 4px 0;
+            font-size: 8.5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            margin: 4px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            margin: 4px 0;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            margin: 4px 0;
+        }
+
+        .metric-card {
+            background: #e3f2fd;
+            padding: 5px;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 8px;
+            line-height: 1.3;
+        }
+
+        .emphasis-box {
+            background: #fff3cd;
+            border-left: 3px solid #f39c12;
+            padding: 5px;
+            margin: 4px 0;
+            font-size: 8.5px;
+            line-height: 1.3;
+        }
+
+        .success-box {
+            background: #d4edda;
+            padding: 5px;
+            text-align: center;
+            border-radius: 3px;
+            margin: 4px 0;
+            font-size: 9px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 2px solid #ecf0f1;
+            font-size: 9px;
+            color: #7f8c8d;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI TALENT PLATFORM - LEAN CANVAS</h1>
+            <div class="subtitle">"Elite Indian AI Talent, Vetted & Matched in 48 Hours"</div>
+        </div>
+
+        <div class="lean-canvas">
+            
+            <!-- TOP ROW - 5 BOXES -->
+            
+            <!-- 1. PROBLEM -->
+            <div class="box problem">
+                <div class="box-header">1. PROBLEM</div>
+                <div class="action-label">CREATE VALUE</div>
+                <div class="content">
+                    <h5>Top Problems:</h5>
+                    <ul>
+                        <li><strong>AI Talent Shortage</strong> - 45% can't find skilled AI engineers; 8-12 week hiring times</li>
+                        <li><strong>Quality vs Cost Trade-off</strong> - Upwork has no vetting; Toptal costs $200+/hr</li>
+                        <li><strong>No India + AI Specialist</strong> - Platforms too broad or don't focus on Indian AI talent</li>
+                    </ul>
+                    <h5>Existing Alternatives:</h5>
+                    <ul>
+                        <li>Upwork (variable quality)</li>
+                        <li>Toptal (expensive, $200+/hr)</li>
+                        <li>Turing (pivoting away from staffing)</li>
+                        <li>Mercor (new entrant, 30% fee)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. SOLUTION -->
+            <div class="box solution">
+                <div class="box-header">4. SOLUTION</div>
+                <div class="action-label">DELIVER VALUE</div>
+                <div class="content">
+                    <h5>Multi-Tier Platform:</h5>
+                    <ul>
+                        <li><strong>Marketplace</strong> - Project-based hourly work</li>
+                        <li><strong>Placement</strong> - Full-time hiring (20-25% fee)</li>
+                        <li><strong>Managed Teams</strong> - Dedicated offshore teams</li>
+                    </ul>
+                    <h5>6-Stage Vetting Process:</h5>
+                    <div style="font-size: 8px; line-height: 1.5;">
+                        1. Application screening<br>
+                        2. Technical assessment<br>
+                        3. Live coding interview<br>
+                        4. Portfolio review<br>
+                        5. Soft skills evaluation<br>
+                        6. Background verification
+                    </div>
+                    <div class="success-box">
+                        <strong style="color: #155724; font-size: 8.5px;">✓ Result: Top 5% Only</strong>
+                    </div>
+                    <h5>No-Code Tech Stack:</h5>
+                    <div style="font-size: 7.5px; background: #f5f5f5; padding: 4px; border-radius: 2px; line-height: 1.3;">
+                        Webflow + Airtable + Zapier + Stripe + Codility
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. UNIQUE VALUE PROPOSITION -->
+            <div class="box uvp">
+                <div class="box-header">3. UNIQUE VALUE PROPOSITION</div>
+                <div class="action-label">CREATE VALUE</div>
+                <div class="content">
+                    <div style="font-size: 11px; font-weight: bold; color: #c0392b; text-align: center; padding: 6px; background: #ffebee; border-radius: 3px; margin-bottom: 6px; line-height: 1.2;">
+                        "Elite Indian AI Talent,<br>Vetted & Matched in 48 Hours"
+                    </div>
+                    <div style="font-size: 8.5px; font-style: italic; text-align: center; color: #7f8c8d; margin-bottom: 8px; line-height: 1.3;">
+                        <strong>High-Level Concept:</strong><br>"The Andela of India for AI Talent"
+                    </div>
+                    <h5>Key Differentiators:</h5>
+                    <ul>
+                        <li>✓ <strong>Top 5% only</strong> (6-stage vetting)</li>
+                        <li>✓ <strong>50-70% cost savings</strong> vs US/EU</li>
+                        <li>✓ <strong>48-72 hour matching</strong></li>
+                        <li>✓ <strong>AI-specialized</strong> (LLMs, MLOps, CV, NLP)</li>
+                        <li>✓ <strong>Zero hassle</strong> (full HR/payroll/compliance)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. UNFAIR ADVANTAGE -->
+            <div class="box unfair">
+                <div class="box-header">9. UNFAIR ADVANTAGE</div>
+                <div class="action-label">DEFEND VALUE</div>
+                <div class="content">
+                    <ul>
+                        <li><strong>Network Effects</strong> - More talent → Better matches → More clients → Better talent</li>
+                        <li><strong>Quality Brand</strong> - "Top 5%" becomes self-reinforcing through success stories</li>
+                        <li><strong>India Expertise</strong> - Deep IIT/NIT relationships, on-ground presence (takes years to build)</li>
+                        <li><strong>Data & AI Moat</strong> - Matching algorithms improve with every placement</li>
+                        <li><strong>Managed Services</strong> - HR/payroll/compliance infrastructure (18-24mo barrier to entry)</li>
+                    </ul>
+                    <div class="emphasis-box">
+                        <strong style="color: #e67e22;">India's Advantage:</strong><br>
+                        • #1 globally in AI skills penetration<br>
+                        • 500K-650K AI professionals<br>
+                        • 50-70% cost savings vs US/EU
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. CUSTOMER SEGMENTS -->
+            <div class="box customer">
+                <div class="box-header">5. CUSTOMER SEGMENTS</div>
+                <div class="action-label">CREATE VALUE</div>
+                <div class="content">
+                    <h5>Early Adopters:</h5>
+                    <div class="highlight" style="background: #e3f2fd; border-left: 3px solid #2196f3;">
+                        <strong>Series A-C Tech Startups</strong><br>
+                        (50-500 employees)
+                    </div>
+                    <ul>
+                        <li><strong>Decision Makers:</strong> CTO, VP Engineering</li>
+                        <li><strong>Need:</strong> Build AI team at 50% cost savings</li>
+                        <li><strong>Driver:</strong> VC-backed growth pressure</li>
+                    </ul>
+                    <h5>Other Segments:</h5>
+                    <ul>
+                        <li>Mid-market tech companies (500-2,000 employees)</li>
+                        <li>Fortune 1000 enterprises (AI Centers of Excellence)</li>
+                    </ul>
+                    <h5>Primary Geography:</h5>
+                    <ul>
+                        <li><strong>US:</strong> Bay Area, NYC, Austin, Seattle</li>
+                        <li><strong>Europe:</strong> UK, Germany, Netherlands</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW - 4 BOXES (Cost spans 2, Revenue spans 3) -->
+
+            <!-- 6. KEY METRICS (bottom left) -->
+            <div class="box metrics" style="grid-column: 1; grid-row: 2;">
+                <div class="box-header">2. KEY METRICS</div>
+                <div class="action-label">MEASURE VALUE</div>
+                <div class="content">
+                    <h5>Unit Economics:</h5>
+                    <div class="grid-2">
+                        <div class="metric-card">
+                            <strong>LTV</strong><br>$86,000<br><span style="font-size: 7px;">(18mo avg)</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>CAC</strong><br>$800<br><span style="font-size: 7px;">(blended)</span>
+                        </div>
+                    </div>
+                    <div class="success-box">
+                        <strong style="color: #155724; font-size: 9.5px;">LTV:CAC = 107:1 🎯</strong>
+                    </div>
+                    <h5>Critical KPIs:</h5>
+                    <ul>
+                        <li>Client churn <5% monthly</li>
+                        <li>Talent retention 90%+ at 6 months</li>
+                        <li>NPS score 50+</li>
+                        <li>Time to match: 48-72 hours</li>
+                        <li>Vetting acceptance rate: 5%</li>
+                    </ul>
+                    <h5>Growth Milestones:</h5>
+                    <ul style="font-size: 8px;">
+                        <li>Month 6: 15 clients, $500K revenue</li>
+                        <li>Year 1: 60 clients, $2.6M revenue</li>
+                        <li>Year 3: 400 clients, $40M revenue</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 7. CHANNELS -->
+            <div class="box channels" style="grid-column: 2; grid-row: 2;">
+                <div class="box-header">7. CHANNELS</div>
+                <div class="action-label">DELIVER VALUE</div>
+                <div class="content">
+                    <h5>Customer Acquisition:</h5>
+                    <ul>
+                        <li><strong>Founder-led sales</strong> - Personal network, LinkedIn, YC portfolio</li>
+                        <li><strong>Content marketing</strong> - SEO: "hire AI engineers India"</li>
+                        <li><strong>Paid advertising</strong> - $10-20K/month (Google + LinkedIn)</li>
+                        <li><strong>Partnerships</strong> - VCs, conferences (TechCrunch Disrupt)</li>
+                    </ul>
+                    <h5>Talent Supply:</h5>
+                    <ul>
+                        <li><strong>IIT/NIT campus</strong> - Direct recruitment, career fairs</li>
+                        <li><strong>LinkedIn outreach</strong> - Target AI professionals (3-5 years exp)</li>
+                        <li><strong>Referral program</strong> - $500 bonus per successful hire</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 8. COST STRUCTURE (spans 2 columns) -->
+            <div class="box cost" style="grid-column: 3 / span 2; grid-row: 2;">
+                <div class="box-header">8. COST STRUCTURE</div>
+                <div class="action-label">CAPTURE VALUE</div>
+                <div class="content">
+                    <h5>Fixed Costs:</h5>
+                    <div class="grid-3">
+                        <div class="metric-card" style="background: #ffebee;">
+                            <strong>Team Salaries</strong><br>30%
+                        </div>
+                        <div class="metric-card" style="background: #ffebee;">
+                            <strong>Technology</strong><br>7%
+                        </div>
+                        <div class="metric-card" style="background: #ffebee;">
+                            <strong>Operations</strong><br>10%
+                        </div>
+                    </div>
+                    <h5>Variable Costs:</h5>
+                    <div class="grid-3">
+                        <div class="metric-card" style="background: #e8f5e9;">
+                            <strong>Talent Costs</strong><br>60-65%
+                        </div>
+                        <div class="metric-card" style="background: #e8f5e9;">
+                            <strong>Marketing</strong><br>17%
+                        </div>
+                        <div class="metric-card" style="background: #e8f5e9;">
+                            <strong>Payment Fees</strong><br>4%
+                        </div>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 6px; border-radius: 3px; border-left: 3px solid #4caf50; margin-top: 6px; font-size: 8.5px; line-height: 1.3;">
+                        <strong>Margin Targets:</strong> Gross Margin 35-40% | EBITDA: Year 1 (19%) → Year 3 (40%)
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. REVENUE STREAMS (spans 3 columns) -->
+            <div class="box revenue" style="grid-column: 5; grid-row: 2;">
+                <div class="box-header">6. REVENUE STREAMS</div>
+                <div class="action-label">CAPTURE VALUE</div>
+                <div class="content">
+                    <h5>1. Subscription Model (70%):</h5>
+                    <div class="grid-4">
+                        <div class="metric-card">
+                            <strong>Junior</strong><br>$4,999/mo
+                        </div>
+                        <div class="metric-card">
+                            <strong>Mid-Level</strong><br>$6,999/mo
+                        </div>
+                        <div class="metric-card">
+                            <strong>Senior</strong><br>$8,999/mo
+                        </div>
+                        <div class="metric-card">
+                            <strong>Lead</strong><br>$12K/mo
+                        </div>
+                    </div>
+                    <h5>2. Placement Fees (20%):</h5>
+                    <div style="font-size: 8px; margin-bottom: 5px; line-height: 1.3;">
+                        20-25% of first-year salary for permanent hires (~$15-20K per placement)
+                    </div>
+                    <h5>3. Premium Services (10%):</h5>
+                    <div style="font-size: 7.5px; margin-bottom: 5px; line-height: 1.3;">
+                        Featured profiles ($99/mo) • Certifications ($199) • API access ($2K/mo)
+                    </div>
+                    <div class="emphasis-box">
+                        <strong>Revenue Projections:</strong><br>
+                        Year 1: <strong>$2.6M</strong> | Year 2: <strong>$12M</strong> | Year 3: <strong>$40M</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div style="font-size: 10px; font-weight: bold; color: #2c3e50; margin-bottom: 4px;">
+                🎯 THE OPPORTUNITY: Build the premium platform for US tech companies to hire India's top 5% AI talent - faster, cheaper, better than any alternative
+            </div>
+            <div>
+                Market: $9.6B → $24.5B by 2033 (25-35% CAGR) | White Space: No player combines India + AI + Top 5% Quality + Managed Services | Seed Ask: $2-3M for 18-month runway to $10M ARR
+            </div>
+        </div>
+    </div>
+</body>
+</html>
